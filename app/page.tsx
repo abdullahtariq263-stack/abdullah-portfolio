@@ -170,7 +170,7 @@ export default function Page() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-50 via-white to-sky-50" />
         <div className="max-w-6xl mx-auto px-4 md:px-6 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
-          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+          <motion.div initial={false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
             <div className="inline-flex items-center gap-2 text-indigo-600 font-medium">
               <Sparkles size={18} /> Available for internships & graduate roles
             </div>
@@ -180,23 +180,37 @@ export default function Page() {
             <p className="text-xl mt-3 text-slate-700">{PROFILE.headline}</p>
             <p className="mt-4 text-slate-600 max-w-2xl">{PROFILE.summary}</p>
             <div className="flex flex-wrap gap-3 mt-6">
-              <a href="#projects" className="inline-flex items-center gap-2 bg-indigo-600 text-white px-5 py-2.5 rounded-xl shadow hover:bg-indigo-700">
+              <a
+                href="#projects"
+                className="inline-flex items-center gap-2 bg-indigo-600 text-white px-5 py-2.5 rounded-xl shadow hover:bg-indigo-700"
+              >
                 See Projects <ArrowRight size={16} />
               </a>
-              <a href="#contact" className="inline-flex items-center gap-2 border border-slate-300 px-5 py-2.5 rounded-xl hover:border-slate-400">
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 border border-slate-300 px-5 py-2.5 rounded-xl hover:border-slate-400"
+              >
                 Contact Me <Mail size={16} />
               </a>
             </div>
             <div className="flex gap-4 mt-6 text-slate-600">
-              <div className="inline-flex items-center gap-2"><MapPin size={16} /> {PROFILE.location}</div>
-              <a className="inline-flex items-center gap-2 hover:text-indigo-600" href={PROFILE.linkedin}><Linkedin size={16} /> LinkedIn</a>
-              <a className="inline-flex items-center gap-2 hover:text-indigo-600" href={PROFILE.github}><Github size={16} /> GitHub</a>
+              <div className="inline-flex items-center gap-2">
+                <MapPin size={16} /> {PROFILE.location}
+              </div>
+              <a className="inline-flex items-center gap-2 hover:text-indigo-600" href={PROFILE.linkedin}>
+                <Linkedin size={16} /> LinkedIn
+              </a>
+              <a className="inline-flex items-center gap-2 hover:text-indigo-600" href={PROFILE.github}>
+                <Github size={16} /> GitHub
+              </a>
             </div>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }}>
+          <motion.div initial={false} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }}>
             <Card className="relative bg-white/80">
-              <div className="absolute -top-6 -right-6 bg-indigo-600 text-white px-4 py-2 rounded-xl shadow">Open to Work</div>
+              <div className="absolute -top-6 -right-6 bg-indigo-600 text-white px-4 py-2 rounded-xl shadow">
+                Open to Work
+              </div>
               <div className="flex items-start gap-4">
                 <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-indigo-200 to-indigo-100 flex items-center justify-center">
                   <Code2 />
