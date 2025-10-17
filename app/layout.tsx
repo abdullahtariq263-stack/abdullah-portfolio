@@ -1,3 +1,5 @@
+import "./globals.css";   // <-- add this line
+
 export const metadata = {
   title: "Abdullah Tariq — Portfolio",
   description: "Cloud • Data/AI • CRO",
